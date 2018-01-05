@@ -4,7 +4,7 @@ Using the arithmetic.py file from Calculator Part 1, create the
 calculator program yourself in this file.
 """
 
-from arithmetic import *
+from original_arithmetic import *
 
 
 
@@ -27,21 +27,21 @@ while True:
         if operator == 'q':
             break
         elif operator == '+':
-            print add(numbers)
+            print reduce(lambda x, y: add(x, y), numbers)
         elif operator == '-':
-            print subtract(numbers)
+            print reduce(lambda x, y: subtract(x, y), numbers)
         elif operator == '*':
-            print multiply(numbers)
+            print reduce(lambda x, y: multiply(x, y), numbers)
         elif operator == '/':
-            print divide(numbers)
+            print reduce(lambda x, y: divide(x, y), numbers)
         elif operator == 'square':
-            print square(numbers)
+            print reduce(lambda x, y: square(x, y), numbers)
         elif operator == "cube":
-            print cube(numbers)
+            print reduce(lambda x, y: cube(x, y), numbers)
         elif operator == 'pow':
-            print power(numbers)
+            print reduce(lambda x, y: power(x, y), numbers)
         elif operator == 'mod':
-            print mod(numbers)
+            print reduce(lambda x, y: mod(x, y), numbers)
         else:
             print 'The request was not valid.'
 
